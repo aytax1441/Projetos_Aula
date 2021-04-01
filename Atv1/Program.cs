@@ -6,26 +6,30 @@ namespace Atv1
     {
         static void Main(string[] args)
         {
-            int[] valores = new int[3];
             int? maior;
             int count = 0, ciclos;
             maior = null;
+
             ciclos = 3;
-            while(count < ciclos)
+            int inserido;
+            do
             {
-                valores[count] = Console.Read();
-                if(maior == null)
+                inserido = Convert.ToInt32(Console.ReadLine());
+                if (maior == null)
                 {
-                    maior = valores[count];
+                    maior = inserido;
                 }
                 else
                 {
-                    if(valores[count] > maior)
+                    if (inserido > maior)
                     {
-                        maior = valores[count];
+                        maior = inserido;
                     }
                 }
-            }
+                count++;
+            } while (count < ciclos);
+
+            Console.WriteLine("O maior valor inserido é: " + maior);
 
         }
     }
