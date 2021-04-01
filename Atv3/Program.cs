@@ -9,7 +9,7 @@ namespace Atv3
         {
             List<int> valores = new List<int>();
             int ciclos, count = 0;
-            ciclos = 10;
+            ciclos = 1000;
 
             while (count < ciclos)
             {
